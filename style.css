@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #302743;
+    min-height: 100vh;
+}
+
+.pagina {
+    width: 100%;
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: auto;
+    padding: 25px clamp(16px, 4vw, 55px);
+    overflow: hidden;
+    position: relative;
+}
+
+.cabecalho {
+    height: clamp(70px, 9vw, 105px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 5;
+}
+
+.logo {
+    width: clamp(65px, 7vw, 90px);
+    height: 45px;
+    object-fit: contain;
+}
+
+.pontos {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    position: absolute;
+    left: 50%;
+    top: 12px;
+    transform: translateX(-50%);
+}
+
+.pontos span {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #8d8a9b;
+}
+
+.pontos .ativo {
+    width: 7px;
+    height: 7px;
+    background: white;
+}
+
+.pesquisa {
+    width: 15px;
+    height: 15px;
+    margin: 5px 8px 0 0;
+    border: 2px solid #eeecef;
+    border-radius: 50%;
+    position: relative;
+}
+
+.pesquisa::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 2px;
+    background: #eeecef;
+    right: -5px;
+    bottom: -3px;
+    transform: rotate(45deg);
+}
+
+.cartao {
+    width: 80%;
+    max-width: 850px;
+    height: clamp(430px, 42vw, 500px);
+    margin: 0 auto;
+    background: #f1f0f2;
+    position: relative;
+}
+
+.conteudo {
+    position: absolute;
+    left: 10.5%;
+    top: 12%;
+    z-index: 4;
+}
+
+.categoria {
+    margin-bottom: 10px;
+    color: #777579;
+    font-size: clamp(15px, 1.5vw, 20px);
+    letter-spacing: 3px;
+}
+
+h1 {
+    margin-bottom: 18px;
+    color: #25252a;
+    font-size: clamp(36px, 4.2vw, 52px);
+    line-height: 1.12;
+    letter-spacing: -1px;
+}
+
+.botao {
+    padding: 7px 15px;
+    border: 1px solid #8d8a9b;
+    border-radius: 20px;
+    background: transparent;
+    color: #777579;
+    font-size: 10px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.video {
+    width: clamp(145px, 18vw, 192px);
+    aspect-ratio: 192 / 125;
+    margin-top: 20px;
+    border-radius: 7px;
+    overflow: hidden;
+    position: relative;
+}
+
+.video img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: white;
+    color: #302743;
+    pointer-events: none;
+}
+
+.personagem {
+    position: absolute;
+    width: 90%;
+    max-width: 650px;
+    right: -30%;
+    bottom: -20%;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .cartao {
+        width: 86%;
+        height: 450px;
+    }
+
+    .conteudo {
+        left: 8%;
+    }
+
+    h1 {
+        font-size: clamp(34px, 5vw, 46px);
+    }
+
+    .personagem {
+        width: 78%;
+        right: -15%;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .pagina {
+        padding: 20px 12px;
+    }
+
+    .cabecalho {
+        height: 65px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 35px;
+    }
+
+    .pontos {
+        gap: 6px;
+    }
+
+    .cartao {
+        width: 100%;
+        height: 620px;
+    }
+
+    .conteudo {
+        left: 7%;
+        top: 7%;
+    }
+
+    .categoria {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: clamp(32px, 8vw, 40px);
+        margin-bottom: 14px;
+    }
+
+    .video {
+        width: 140px;
+        margin-top: 16px;
+    }
+
+    .play {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .personagem {
+        width: 85%;
+        max-width: 380px;
+        right: -10%;
+        bottom: 0;
+    }
+
+    footer {
+        font-size: 8px;
+        margin-top: 20px;
+    }
+}
+
